@@ -10,5 +10,10 @@ package knapsack;
  * @author alexandru
  */
 public interface Item {
+    public double getProfitFactor(int weight,int value)
+    {
+        return weight/value;
+        
+    }
     
 }
