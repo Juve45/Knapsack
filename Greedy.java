@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package knapsack;
 
 /**
  *
  * @author alexandru
  */
-public interface Item extends Comparable {
-    public double getProfitFactor();
+public class Greedy extends KnapsackAlgorithm{
     
-    public int getWeight();
-
+    public Greedy(Knapsack k) {
+        super(k);
+    }
+    
+    
     
 }
