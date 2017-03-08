@@ -45,4 +45,22 @@ public class Knapsack {
         
     }
     
+      @Override
+          public String toString()
+        {
+            int i;
+            StringBuilder stringBuilder=new StringBuilder();
+            stringBuilder.append(new StringBuilder ("Capacitate: "));
+            stringBuilder.append(new StringBuilder (this.capacity));
+            stringBuilder.append(new StringBuilder ("; "));
+            for(i=0;i<=itemList.size();i++)
+            {
+                 stringBuilder.append(new StringBuilder (itemList.get(i).getName()));
+                 stringBuilder.append(new StringBuilder ("; "));
+            }
+            
+            
+        return stringBuilder.toString();
+        
+        }
 }
