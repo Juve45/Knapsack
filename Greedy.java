@@ -9,16 +9,12 @@ package knapsack;
  *
  * @author alexandru
  */
-public class Book extends AbstractItem implements Item {
-
-    String name;
-    int Weight;
-    int value;
-
-    public Book(String name, int weight, int value) {
-        super(name, weight, value);
-    }    
-
+public class Greedy extends KnapsackAlgorithm{
+    
+    public Greedy(Knapsack k) {
+        super(k);
+    }
+    
     
     
 }

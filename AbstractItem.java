@@ -12,7 +12,8 @@ import sun.security.krb5.internal.rcache.AuthList;
  *
  * @author alexandru
  */
-public class AbstractItem implements Item, Comparable {
+public class AbstractItem implements Item{
+
 
     private String name;
     private int weight;
@@ -29,6 +30,7 @@ public class AbstractItem implements Item, Comparable {
         this.name = name;
 
     }
+
 
     @Override
     public void setWeight(int weight) {
@@ -62,7 +64,10 @@ public class AbstractItem implements Item, Comparable {
 
     @Override
     public int compareTo(Object t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.getProfitFactor() > ((AbstractItem)t).getProfitFactor())
+            return 1;
+        return -1;
+
     }
 
     @Override

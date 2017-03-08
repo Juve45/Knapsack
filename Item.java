@@ -12,6 +12,7 @@ package knapsack;
  */
 public interface Item extends Comparable {
     public double getProfitFactor();
+
     public String getName();
     public int getValue();
     public int getWeight();

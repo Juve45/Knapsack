@@ -14,11 +14,48 @@ import java.util.Collections;
  */
 public class Knapsack {
 
+
     private final int capacity;
     private ArrayList<Item> itemList;
     /**
      * @param args the command line arguments items, capacity, constructor
      */
+    
+    public void sortItem()
+    {
+        Collections.sort(itemList);
+    }
+    
+    public int getCapacity()
+    {
+        return capacity;
+    }
+    
+    public void addItem(Item item)
+    {
+        itemList.add(item);
+    }
+    
+    public ArrayList<Item> getItemList()
+    {
+        return itemList;
+    }
+    
+        
+    public void sortItem() {
+        Collections.sort(itemList);
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.print("saa");
+        Knapsack k = new Knapsack(5);
+        
+        
+        
+        
+        k.sortItem();
+        
+        
     Book b1 = new Book("Dragon Rising", 3, 5);
     Book b2 = new Book("A Blade in the Dark", 3, 5);
     Weapon w1 = new Weapon("Ancient Sword", 5, 10);
@@ -29,18 +66,6 @@ public class Knapsack {
     knapsack.add (w1);
 
     System.out.println (knapsack);
-
-    public Knapsack(int __capacity) {
-        capacity = __capacity;
-    }
-
-    public void sortItem() {
-        Collections.sort(itemList);
-    }
-
-    public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.print("saa");
 
     }
 
