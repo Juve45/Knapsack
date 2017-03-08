@@ -24,16 +24,19 @@ public class AbstractItem implements Item, Comparable {
         this.value = value;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
 
     }
 
+    @Override
     public void setWeight(int weight) {
         this.weight = weight;
 
     }
 
+    @Override
     public void setValue(int value) {
 
         this.value = value;

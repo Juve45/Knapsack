@@ -15,5 +15,7 @@ public interface Item extends Comparable {
     public String getName();
     public int getValue();
     public int getWeight();
-    
+    public void setName(String nume);
+     public void setValue(int val);
+       public void setWeight(int weig);
 }
