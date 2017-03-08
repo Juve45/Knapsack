@@ -9,6 +9,7 @@ package knapsack;
  *
  * @author alexandru
  */
-public interface Item extends Comparable{
+public class Greedy implements Algorithm{
+    
     
 }

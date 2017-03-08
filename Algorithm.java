@@ -9,6 +9,6 @@ package knapsack;
  *
  * @author alexandru
  */
-public interface Item extends Comparable{
+public interface Algorithm {
     
 }
