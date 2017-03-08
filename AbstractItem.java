@@ -5,13 +5,14 @@
  */
 package knapsack;
 
+import java.util.*;
 import sun.security.krb5.internal.rcache.AuthList;
 
 /**
  *
  * @author alexandru
  */
-public class AbstractItem implements Item{
+public class AbstractItem implements Item, Comparable {
 
     private String name;
     private int weight;
@@ -22,31 +23,50 @@ public class AbstractItem implements Item{
         this.weight = weight;
         this.value = value;
     }
-    
-  public void  setName(String name) {
+
+    public void setName(String name) {
         this.name = name;
-        
-    }
-  public void setWeight( int weight) {
-         this.weight = weight;
 
     }
-   public void setValue(int value) {
-    
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+
+    }
+
+    public void setValue(int value) {
+
         this.value = value;
     }
-    public String  getName() {
-        return this.name ;
-        
-    }
-  public int getWeight() {
-         return this.weight;
+
+    @Override
+    public String getName() {
+        return this.name;
 
     }
-   public int getValue() {
-    
+
+    @Override
+    public int getWeight() {
+        return this.weight;
+
+    }
+
+    @Override
+    public int getValue() {
+
         return this.value;
     }
-   getProfitFactor(this.weight,this.value);
+
+    @Override
+    public int compareTo(Object t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double getProfitFactor() {
+
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.value / this.weight;
+    }
 
 }

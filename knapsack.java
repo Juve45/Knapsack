@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package knapsack;
 
 /**
  *
- * @author alexandru
+ * @author ada
  */
-public interface Item extends Comparable {
-    public double getProfitFactor();
-    public String getName();
-    public int getValue();
-    public int getWeight();
+class knapsack {
     
 }
