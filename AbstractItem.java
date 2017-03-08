@@ -14,6 +14,7 @@ import sun.security.krb5.internal.rcache.AuthList;
  */
 public class AbstractItem implements Item{
 
+
     private String name;
     private int weight;
     private int value;
@@ -24,31 +25,38 @@ public class AbstractItem implements Item{
         this.value = value;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
 
     }
 
+
+    @Override
     public void setWeight(int weight) {
         this.weight = weight;
 
     }
 
+    @Override
     public void setValue(int value) {
 
         this.value = value;
     }
 
+    @Override
     public String getName() {
         return this.name;
 
     }
 
+    @Override
     public int getWeight() {
         return this.weight;
 
     }
 
+    @Override
     public int getValue() {
 
         return this.value;
@@ -59,6 +67,7 @@ public class AbstractItem implements Item{
         if(this.getProfitFactor() > ((AbstractItem)t).getProfitFactor())
             return 1;
         return -1;
+
     }
 
     @Override
@@ -67,6 +76,5 @@ public class AbstractItem implements Item{
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return this.value / this.weight;
     }
-
 
 }

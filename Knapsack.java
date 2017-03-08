@@ -14,22 +14,12 @@ import java.util.Collections;
  */
 public class Knapsack {
 
-    private int capacity;
+
+    private final int capacity;
     private ArrayList<Item> itemList;
     /**
-     * @param args the command line arguments
-     * items, capacity, constructor
+     * @param args the command line arguments items, capacity, constructor
      */
-       
-    public Knapsack(int __capacity) {
-        capacity = __capacity;
-    }
-
-    @Override
-    public String toString()
-    {
-        return "a";
-    }
     
     public void sortItem()
     {
@@ -51,6 +41,10 @@ public class Knapsack {
         return itemList;
     }
     
+        
+    public void sortItem() {
+        Collections.sort(itemList);
+    }
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.print("saa");
@@ -62,7 +56,42 @@ public class Knapsack {
         k.sortItem();
         
         
-        
+    Book b1 = new Book("Dragon Rising", 3, 5);
+    Book b2 = new Book("A Blade in the Dark", 3, 5);
+    Weapon w1 = new Weapon("Ancient Sword", 5, 10);
+    Knapsack knapsack = new Knapsack(10);
+
+    knapsack.add (b1, b2);
+
+    knapsack.add (w1);
+
+    System.out.println (knapsack);
+
     }
-    
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+        int i;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(new StringBuilder("Capacitate: "));
+        stringBuilder.append(new StringBuilder(this.capacity));
+        stringBuilder.append(new StringBuilder("; "));
+        for(i=0;i<=itemList.size();i++)
+            {
+                 stringBuilder.append(new StringBuilder("Numele este: "));
+                 stringBuilder.append(new StringBuilder (itemList.get(i).getName()));
+                  stringBuilder.append(new StringBuilder("greutatea este: "));
+                 stringBuilder.append(new StringBuilder (itemList.get(i).getWeight()));
+                  stringBuilder.append(new StringBuilder("Valoarea este: "));
+                 stringBuilder.append(new StringBuilder (itemList.get(i).getValue()));
+                 stringBuilder.append(new StringBuilder ("; "));
+            }
+
+        return stringBuilder.toString();
+
+    }
 }
